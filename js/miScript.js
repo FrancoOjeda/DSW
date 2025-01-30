@@ -80,36 +80,36 @@ function calcularTotalCarrito() {
 }
 
 
-function enviarCorreo() {
+// function enviarCorreo() {
 
-  emailjs.init('Pf93voxEOD7J5kZawSwGm'); // Reemplaza con tu User ID
+//   emailjs.init('Pf93voxEOD7J5kZawSwGm'); // Reemplaza con tu User ID
 
-  // Obtener los valores de los campos del formulario
-  const apellido = document.getElementById('apellido').value;
-  const nombre = document.getElementById('nombre').value;
-  const email = document.getElementById('email').value;
-  const comentario = document.getElementById('comentario').value;
+//   // Obtener los valores de los campos del formulario
+//   const apellido = document.getElementById('apellido').value;
+//   const nombre = document.getElementById('nombre').value;
+//   const email = document.getElementById('email').value;
+//   const comentario = document.getElementById('comentario').value;
 
-  // Crear un objeto con los datos del formulario
-  const templateParams = {
-    from_apellido: apellido,
-    from_nombre: nombre,
-    reply_to: email,
-    comentario: comentario,
-  };
+//   // Crear un objeto con los datos del formulario
+//   const templateParams = {
+//     from_apellido: apellido,
+//     from_nombre: nombre,
+//     reply_to: email,
+//     comentario: comentario,
+//   };
 
-  // Enviar el correo electrónico
-  emailjs.send('service_m11d11a', 'template_nr0xg0c', templateParams)
-    .then(function(response) {
-      console.log('SUCCESS!', response.status, response.text);
-      alert('¡Mensaje enviado correctamente!');
-      // Aquí puedes agregar acciones adicionales después de enviar el correo,
-      // como limpiar los campos del formulario o mostrar un mensaje de agradecimiento más elaborado
-    })
-    .catch(function(error) {
-      console.error('FAILED...', error);
-      alert('Lo sentimos, ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
-      // Aquí puedes manejar los errores de forma más específica,
-      // como mostrar un mensaje de error más detallado al usuario
-    });
-}
+//   // Enviar el correo electrónico
+//   emailjs.send('service_m11d11a', 'template_nr0xg0c', templateParams)
+//     .then(function(response) {
+//       console.log('SUCCESS!', response.status, response.text);
+//       alert('¡Mensaje enviado correctamente!');
+//       // Aquí puedes agregar acciones adicionales después de enviar el correo,
+//       // como limpiar los campos del formulario o mostrar un mensaje de agradecimiento más elaborado
+//     })
+//     .catch(function(error) {
+//       console.error('FAILED...', error);
+//       alert('Lo sentimos, ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
+//       // Aquí puedes manejar los errores de forma más específica,
+//       // como mostrar un mensaje de error más detallado al usuario
+//     });
+// }
